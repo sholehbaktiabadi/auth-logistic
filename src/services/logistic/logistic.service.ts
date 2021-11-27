@@ -14,7 +14,7 @@ export class LogisticService {
         dto.amount = data.amount;
         dto.destination_name = data.destination_name;
         dto.origin_name = data.origin_name;
-        dto.amount = data.amount;
+        dto.duration = data.duration;
     
         try {
           return await this.logisticRepository.save(dto);
