@@ -9,7 +9,7 @@ export class AuthService {
 
   async getToken(user: User) {
     const payloads = {
-      id: user.id
+      id: user.id,
     };
     return { acceess_token: this.jwtService.sign(payloads) };
   }
@@ -17,7 +17,7 @@ export class AuthService {
   async refreshToken({ refreshToken }: refreshTokenDto) {
     const user = this.jwtService.decode(refreshToken);
     const payloads = {
-      id: user['id']
+      id: user['id'],
     };
     const access_token = this.jwtService.sign(payloads);
     return access_token;

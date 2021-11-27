@@ -6,10 +6,10 @@ import { LogisticService } from './logistic.service';
 @UseGuards(JwtAuthGuard)
 @Controller('logistic')
 export class LogisticController {
-    constructor(private logisticservice: LogisticService){}
+  constructor(private logisticservice: LogisticService) {}
 
-    @Post()
-    async create(@Body() dto: LogisticDto) {
-      return await this.logisticservice.create(dto)
-    }
+  @Post()
+  async create(@Body() dto: LogisticDto) {
+    return await this.logisticservice.create(dto);
+  }
 }

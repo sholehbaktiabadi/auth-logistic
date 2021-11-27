@@ -7,6 +7,6 @@ import { Logistic } from './model/logistic.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([Logistic])],
   providers: [LogisticService],
-  controllers: [LogisticController]
+  controllers: [LogisticController],
 })
 export class LogisticModule {}
